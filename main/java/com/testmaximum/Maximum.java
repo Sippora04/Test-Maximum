@@ -5,7 +5,7 @@ public static void main (String args[]) {
 	System.out.println("Welcome");
 }
 
-public static Integer findMaximum(Integer num1, Integer num2, Integer num3) {
+public static Integer findIntegerMaximum(Integer num1, Integer num2, Integer num3) {
 	Integer max = num1;
 	if (num2.compareTo(max) > 0) {
 		max = num2;
