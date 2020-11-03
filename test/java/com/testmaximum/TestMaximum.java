@@ -55,7 +55,7 @@ public class TestMaximum {
 	}
 	
 	@Test
-	public void testFloatMaxWithMaxAtSecondPosition() {
+	public void testFloatMax_MaxAtSecondPosition() {
 		Float max = Maximum.findFloatMaximum(4.6f, 9.4f, 1.5f);
 		boolean flag;
 		if (max.equals(9.4f)) {
@@ -67,10 +67,46 @@ public class TestMaximum {
 	}
 
 	@Test
-	public void testFloatMaxWithMaxAtThirdPosition() {
+	public void testFloatMax_MaxAtThirdPosition() {
 		Float max = Maximum.findFloatMaximum(1.5f, 4.6f, 98.4f);
 		boolean flag;
 		if (max.equals(98.4f)) {
+			flag = true;
+		} else {
+			flag = false;
+		}
+		assertEquals(true, flag);
+	}
+	
+	@Test
+	public void testStringMax_MaxAtFirstPosition() {
+		String max = Maximum.findStringMaximum("Peach", "Apple", "Banana");
+		boolean flag;
+		if (max.equals("Peach")) {
+			flag = true;
+		} else {
+			flag = false;
+		}
+		assertEquals(true, flag);
+	}
+
+	@Test
+	public void testStringMax_MaxAtSecondPosition() {
+		String max = Maximum.findStringMaximum("Apple", "Peach", "Banana");
+		boolean flag;
+		if (max.equals("Peach")) {
+			flag = true;
+		} else {
+			flag = false;
+		}
+		assertEquals(true, flag);
+	}
+
+	@Test
+	public void testStringMaxWithMaxAtThirdPosition() {
+		String max = Maximum.findStringMaximum("Apple", "Banana", "Peach");
+		boolean flag;
+		if (max.equals("Peach")) {
 			flag = true;
 		} else {
 			flag = false;
